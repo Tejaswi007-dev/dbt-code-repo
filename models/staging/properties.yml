@@ -7,3 +7,11 @@ models:
         tests:
           - not_null
           - unique
+  - name: stg_suppliers
+    database: |
+      {% if target.name=='dev' %} dev_jaffleshop
+      
+      {% elif target.name=='prod' %} prd_inventory %}
+      {%- endif -%}
+    schema: inventory_analytics
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
