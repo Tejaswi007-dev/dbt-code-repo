@@ -40,5 +40,8 @@ models:
     # Applies to all files under models/example/
     marts:
       +materialized: table
+      + database: prd_inventory
+      + schema: inventory_analytics
     staging:
       +materialized: view
+      
