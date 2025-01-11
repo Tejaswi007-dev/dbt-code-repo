@@ -4,7 +4,7 @@ sources:
   - name: ecom
     database: |
       {% if target.name=='default' %} dev_jaffleshop
-      {% elif target.name=='qa' %} qa_jaffleshop
+      {% elif target.name=='ci' %} qa_jaffleshop
       {% elif target.name=='prod' %} prd_jaffleshop
       {%- else -%} invalid_database
       {%- endif -%}
