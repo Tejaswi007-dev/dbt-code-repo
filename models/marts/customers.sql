@@ -19,10 +19,10 @@ customer_orders_summary as (
 
         count(distinct orders.order_id) as count_lifetime_orders,
 
-       ---testing merge conflicts test2   
+       
         
     ---testing merge conflicts
-        count(distinct orders.order_id) > 10 as is_repeat_buyer,
+        count(distinct orders.order_id) > 111 as is_repeat_buyer,
 
         min(orders.ordered_at) as first_ordered_at,
         max(orders.ordered_at) as last_ordered_at,
